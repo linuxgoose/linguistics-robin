@@ -7,10 +7,10 @@ requires = [
 build-backend = "flit_core.buildapi"
 
 [tool.flit.metadata]
-module = "pyphonetics"
-author = "Lilykos"
-author-email = "ilias.koutsakis@gmail.com"
-home-page = "https://github.com/Lilykos/pyphonetics"
+module = "linguistics_robin"
+author = "Jordan Robinson"
+author-email = "hello@jordanrobinson.org"
+home-page = "https://github.com/linuxgoose/linguistics-robin"
 description-file="README.rst"
 classifiers = [
     "License :: OSI Approved :: MIT License",
