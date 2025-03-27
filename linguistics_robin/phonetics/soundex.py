@@ -32,10 +32,19 @@ class Soundex(PhoneticAlgorithm):
         tail = ''.join(self.translations[char] for char in word
                        if self.translations[char] != 'D')
 
-        # Dropping first code's letter if duplicate
+        # Dropping all leading code's letters if same as first letter - AMERICAN SOUNDEX RULE
         if len(tail):
-            if tail[0] == self.translations[first_letter]:
-                tail = tail[1:]
+            print(word)
+            for i, char in enumerate(tail):
+                if char != self.translations[first_letter] and len(tail) > 1:
+                    tail = tail[i:]
+                    break
+                if len(tail) == 1:
+                    if tail[0] == self.translations[first_letter]:
+                        tail = tail[1:]
+                        break
+                if tail[i+1:] == '':
+                    tail = tail[i+1:]
 
         code = squeeze(tail).replace('0', '')
         return self.pad(first_letter + code)
