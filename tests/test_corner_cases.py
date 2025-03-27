@@ -1,6 +1,6 @@
 import pytest
-from pyphonetics import Soundex, RefinedSoundex, FuzzySoundex
-from pyphonetics.exceptions import EmptyStringError
+from linguistics_robin import Soundex, RefinedSoundex, FuzzySoundex
+from linguistics_robin.exceptions import EmptyStringError
 
 
 def test_soundex():

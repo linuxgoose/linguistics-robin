@@ -1,4 +1,4 @@
-from pyphonetics.distance_metrics import levenshtein_distance, hamming_distance
+from linguistics_robin.distance_metrics import levenshtein_distance, hamming_distance
 
 
 def test_levenshtein():
