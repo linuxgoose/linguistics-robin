@@ -28,7 +28,7 @@ def test_soundex():
         ('A261', 'Ashcroft'),
         ('A261', 'Ashcraft'),
         ('T522', 'Tymczak'),
-        ('P123', 'Pfister'),
+        ('P236', 'Pfister'),
         ('A536', 'Andrew'),
         ('W252', 'Wozniak'),
         ('C423', 'Callister'),
