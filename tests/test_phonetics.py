@@ -1,4 +1,4 @@
-from pyphonetics import Metaphone, Soundex, MatchingRatingApproach,\
+from linguistics_robin import Metaphone, Soundex, MatchingRatingApproach,\
     FuzzySoundex, Lein, RefinedSoundex
 
 

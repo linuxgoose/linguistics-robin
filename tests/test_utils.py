@@ -1,4 +1,4 @@
-from pyphonetics.utils import squeeze, translation
+from linguistics_robin.utils import squeeze, translation
 
 
 def test_squeeze():

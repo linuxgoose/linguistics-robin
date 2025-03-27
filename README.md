@@ -1,6 +1,6 @@
-# Pyphonetics
+# Linguistics Robin
 
-Pyphonetics is a Python 3 library for phonetic algorithms. Right now, the following algorithms are implemented and supported:
+Linguistics Robin is a Python linguistics collection that stemmed from a phonetics only library (which is why there is currently more phonetic tooling). Right now, the following algorithms are implemented and supported:
 
  * Soundex
  * Metaphone
@@ -18,13 +18,13 @@ More will be added in the future.
 
 ## Instalation
 
-The module is available in PyPI, just use `pip install pyphonetics`.
+The module is available in PyPI, just use `pip install linguistics-robin`.
 
 
 ## Usage
 
 ```python
->>> from pyphonetics import Soundex
+>>> from linguistics_robin import Soundex
 >>> soundex = Soundex()
 >>> soundex.phonetics('Rupert')
 'R163'
@@ -37,7 +37,7 @@ True
 The same API applies to every algorithm, e.g:
 
 ```python
->>> from pyphonetics import Metaphone
+>>> from linguistics_robin import Metaphone
 >>> metaphone = Metaphone()
 >>> metaphone.phonetics('discrimination')
 'TSKRMNXN'
@@ -46,14 +46,10 @@ The same API applies to every algorithm, e.g:
 You can also use the `distance(word1, word2, metric='levenshtein')` method to find the distance between 2 phonetic representations.
 
 ```python
->>> from pyphonetics import RefinedSoundex
+>>> from linguistics_robin import RefinedSoundex
 >>> rs = RefinedSoundex()
 >>> rs.distance('Rupert', 'Robert')
 0
 >>> rs.distance('assign', 'assist', metric='hamming')
 2
 ```
-
-## Credits
-
-The module was largely based on the implementation of phonetic algorithms found in the [Talisman.js](https://github.com/Yomguithereal/talisman) Node NLP library.
