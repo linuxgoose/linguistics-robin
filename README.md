@@ -18,7 +18,7 @@ More will be added in the future.
 
 ## Installation (in progress)
 
-The module is available in PyPI, just use `pip install linguistics-robin`.
+The module is available in PyPI, just use `pip install linguistics_robin`.
 
 
 ## Usage
