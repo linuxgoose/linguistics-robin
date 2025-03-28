@@ -11,6 +11,7 @@ Linguistics Robin is a Python linguistics collection that stemmed from a phoneti
  * Matching Rating Approach
  * New York State Identification and Intelligence System (NYSIIS)
  * Caverphone
+ * Caverphone 2
  
 In addition, the following distance metrics:
 
