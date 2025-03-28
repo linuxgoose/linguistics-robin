@@ -4,6 +4,7 @@ Linguistics Robin is a Python linguistics collection that stemmed from a phoneti
 
  * Soundex
  * Metaphone
+ * Double-Metaphone
  * Refined Soundex
  * Fuzzy Soundex
  * Lein
@@ -15,7 +16,9 @@ In addition, the following distance metrics:
  * Hamming
  * Levenshtein
 
-More will be added in the future.
+More will be added in the future. Please refer to the issues list for algorithms slated for the future.
+
+Pull requests are always welcome to assist with the addition of new algorithms.
 
 ## Installation
 
