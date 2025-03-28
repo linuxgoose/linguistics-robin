@@ -2,9 +2,7 @@ from .phonetic_algorithm import PhoneticAlgorithm
 from ..utils import check_str, check_empty
 from typing import List
 import string
-    
-# defined vowels as well as additional characters defined in the specification ("æ","ā","ø")
-__vowels : List[str] = ["a","e","i","o","u","æ","ā","ø"]  
+
 
 class Caverphone2(PhoneticAlgorithm):
     """
@@ -12,6 +10,9 @@ class Caverphone2(PhoneticAlgorithm):
 
     def __init__(self):
         super().__init__()
+
+    # defined vowels as well as additional characters defined in the specification ("æ","ā","ø")
+    __vowels : List[str] = ["a","e","i","o","u","æ","ā","ø"]  
 
     def phonetics(self, word):
         # Step 1.
