@@ -6,3 +6,4 @@ from .lein import *
 from .refined_soundex import *
 from .nysiis import *
 from .doublemetaphone import *
+from .caverphone import *
