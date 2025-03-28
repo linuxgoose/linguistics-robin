@@ -10,4 +10,4 @@ from .phonetics import (Soundex,
                         Caverphone,
                         Caverphone2)
 
-__version__ = '0.5.8'
+__version__ = '0.5.9'

@@ -60,7 +60,7 @@ class Caverphone2(PhoneticAlgorithm):
         # Step 7. (18-19)
         step_7_output : str = ""
         for index, char in enumerate(input) :
-            if char in __vowels :
+            if char in self.__vowels :
                 step_7_output += "A" if index == 0 else "3"  
             else :
                 step_7_output += char
