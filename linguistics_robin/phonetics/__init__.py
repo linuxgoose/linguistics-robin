@@ -5,3 +5,4 @@ from .fuzzy_soundex import *
 from .lein import *
 from .refined_soundex import *
 from .nysiis import *
+from .doublemetaphone import *

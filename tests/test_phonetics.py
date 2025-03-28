@@ -1,5 +1,5 @@
 from linguistics_robin import Metaphone, Soundex, MatchingRatingApproach,\
-    FuzzySoundex, Lein, RefinedSoundex, NYSIIS
+    FuzzySoundex, Lein, RefinedSoundex, NYSIIS, DoubleMetaphone
 
 def test_nysiis():
     tests = [
@@ -28,12 +28,28 @@ def test_metaphone():
         ('AM', 'am'),
         ('S', 'say'),
         ('FSNT', 'pheasant'),
-        ('KT', 'god')
+        ('KT', 'god'),
+        ('BB', 'bob'),
     ]
 
     metaphone = Metaphone()
     for test in tests:
         assert metaphone.phonetics(test[1]) == test[0]
+
+
+def test_doublemetaphone():
+    tests = [
+        (('PP', None), 'Bob'),
+        (('MRS', None), 'Maurice'),
+        (('ALTR', 'FLTR'), 'Walter'),
+        (('PFSTR', None), 'Pfister'),
+        (('RS', None), 'Rousseau'),
+        (('K0', 'KTR'), 'Gauthier')
+    ]
+
+    dm = DoubleMetaphone()
+    for test in tests:
+        assert dm.phonetics(test[1]) == test[0]
 
 
 def test_soundex():

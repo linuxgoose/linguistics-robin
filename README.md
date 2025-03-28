@@ -4,6 +4,7 @@ Linguistics Robin is a Python linguistics collection that stemmed from a phoneti
 
  * Soundex
  * Metaphone
+ * Double-Metaphone
  * Refined Soundex
  * Fuzzy Soundex
  * Lein

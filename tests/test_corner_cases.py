@@ -1,6 +1,25 @@
 import pytest
-from linguistics_robin import Soundex, RefinedSoundex, FuzzySoundex, NYSIIS
+from linguistics_robin import Soundex, RefinedSoundex, FuzzySoundex, NYSIIS, Metaphone, DoubleMetaphone
 from linguistics_robin.exceptions import EmptyStringError
+
+def test_doublemetaphone():
+    dm = DoubleMetaphone()
+
+    assert dm.phonetics('maurice') == ('MRS', None)
+    assert dm.phonetics('bob') == ('PP', None)
+    assert dm.phonetics('walter') == ('ALTR', 'FLTR')
+
+    with pytest.raises(EmptyStringError):
+        dm.phonetics('')
+
+def test_metaphone():
+    metaphone = Metaphone()
+
+    assert metaphone.phonetics('maurice') == 'MRS'
+    assert metaphone.phonetics('bob') == 'BB'
+
+    with pytest.raises(EmptyStringError):
+        metaphone.phonetics('')
 
 def test_nysiis():
     nysiis = NYSIIS()

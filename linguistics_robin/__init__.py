@@ -5,6 +5,7 @@ from .phonetics import (Soundex,
                         FuzzySoundex,
                         Lein,
                         RefinedSoundex,
-                        NYSIIS)
+                        NYSIIS,
+                        DoubleMetaphone)
 
 __version__ = '0.5.5'
