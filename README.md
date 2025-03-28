@@ -8,6 +8,7 @@ Linguistics Robin is a Python linguistics collection that stemmed from a phoneti
  * Fuzzy Soundex
  * Lein
  * Matching Rating Approach
+ * New York State Identification and Intelligence System (NYSIIS)
  
 In addition, the following distance metrics:
 

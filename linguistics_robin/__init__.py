@@ -1,9 +1,10 @@
-"""A Python 3 phonetics library."""
+"""A Python 3 linguistics collection library."""
 from .phonetics import (Soundex,
                         Metaphone,
                         MatchingRatingApproach,
                         FuzzySoundex,
                         Lein,
-                        RefinedSoundex)
+                        RefinedSoundex,
+                        NYSIIS)
 
-__version__ = '0.5.4'
+__version__ = '0.5.5'

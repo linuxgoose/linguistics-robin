@@ -1,6 +1,22 @@
 from linguistics_robin import Metaphone, Soundex, MatchingRatingApproach,\
-    FuzzySoundex, Lein, RefinedSoundex
+    FuzzySoundex, Lein, RefinedSoundex, NYSIIS
 
+def test_nysiis():
+    tests = [
+        ('STAD', 'stewart'),
+        ('WALVAR[ANPTAN]', 'wolverhampton'),
+        ('WALAN', 'William'),
+        ('ZANAR', 'Zimmer'),
+        ('JALAN', 'Jalen'),
+        ('CARSAN', 'Carson'),
+        ('CATARA[N]', 'Catherine'),
+        ('CATARA[N]', 'Katherine'),
+        ('LASXV', 'LouisXVI'),
+    ]
+
+    nysiis = NYSIIS()
+    for test in tests:
+        assert nysiis.phonetics(test[1]) == test[0]
 
 def test_metaphone():
     tests = [
