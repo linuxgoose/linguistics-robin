@@ -1,7 +1,19 @@
 import pytest
-from linguistics_robin import Soundex, RefinedSoundex, FuzzySoundex
+from linguistics_robin import Soundex, RefinedSoundex, FuzzySoundex, NYSIIS
 from linguistics_robin.exceptions import EmptyStringError
 
+def test_nysiis():
+    nysiis = NYSIIS()
+
+    assert nysiis.phonetics('bob') == 'BAB'
+    assert nysiis.phonetics('aa') == 'A'
+    assert nysiis.phonetics('b') == 'B'
+    assert nysiis.phonetics('cat') == 'CAT'
+    assert nysiis.phonetics('s') == 'S'
+    assert nysiis.phonetics('w') == 'W'
+
+    with pytest.raises(EmptyStringError):
+        nysiis.phonetics('')
 
 def test_soundex():
     soundex = Soundex()
