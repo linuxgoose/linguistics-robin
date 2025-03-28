@@ -1,5 +1,34 @@
 from linguistics_robin import Metaphone, Soundex, MatchingRatingApproach,\
-    FuzzySoundex, Lein, RefinedSoundex, NYSIIS, DoubleMetaphone
+    FuzzySoundex, Lein, RefinedSoundex, NYSIIS, DoubleMetaphone, Caverphone,\
+    Caverphone2
+
+def test_caverphone():
+    tests = [
+        ('MRSA', 'maurice'),
+        ('WTA', 'walter'),
+        ('MKLFTA', 'Maclaverty'),
+    ]
+
+    caverphone = Caverphone()
+    for test in tests:
+        assert caverphone.phonetics(test[1]) == test[0]
+
+def test_caverphone2():
+    tests = [
+        ('TMPSN11111', 'Thompson'),
+        ('LA11111111', 'Lee'),
+        ('STFNSN1111', 'Stevenson'),
+        ('PTA1111111', 'Peter'),
+        ('RTA1111111', 'Ready'),
+        ('APA1111111', 'Able'),
+        ('SSA1111111', 'social'),
+        ('KLN1111111', 'Karleen'),
+        ('TTA1111111', 'Tudor'),
+    ]
+
+    caverphone = Caverphone2()
+    for test in tests:
+        assert caverphone.phonetics(test[1]) == test[0]
 
 def test_nysiis():
     tests = [

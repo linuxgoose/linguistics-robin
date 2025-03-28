@@ -1,6 +1,29 @@
 import pytest
-from linguistics_robin import Soundex, RefinedSoundex, FuzzySoundex, NYSIIS, Metaphone, DoubleMetaphone
+from linguistics_robin import Soundex, RefinedSoundex, FuzzySoundex, NYSIIS, \
+    Metaphone, DoubleMetaphone, Caverphone, Caverphone2
 from linguistics_robin.exceptions import EmptyStringError
+
+def test_caverphone():
+    caverphone = Caverphone()
+
+    assert caverphone.phonetics('maurice') == 'MRSA'
+    assert caverphone.phonetics('bob') == 'PP'
+    assert caverphone.phonetics('walter') == 'WTA'
+    assert caverphone.phonetics('Maclaverty') == 'MKLFTA'
+
+    with pytest.raises(EmptyStringError):
+        caverphone.phonetics('')
+
+def test_caverphone2():
+    caverphone = Caverphone2()
+
+    assert caverphone.phonetics('Thompson') == 'TMPSN11111'
+    assert caverphone.phonetics('Lee') == 'LA11111111'
+    assert caverphone.phonetics('Stevenson') == 'STFNSN1111'
+    assert caverphone.phonetics('Peter') == 'PTA1111111'
+
+    with pytest.raises(EmptyStringError):
+        caverphone.phonetics('')
 
 def test_doublemetaphone():
     dm = DoubleMetaphone()
