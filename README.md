@@ -17,7 +17,7 @@ In addition, the following distance metrics:
 
 More will be added in the future.
 
-## Installation (in progress)
+## Installation
 
 The module is available in PyPI, just use `pip install linguistics_robin`.
 
