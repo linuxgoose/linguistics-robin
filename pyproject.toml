@@ -1,7 +1,7 @@
 [build-system]
 requires-python="3"
 requires = [
-    "flit_core >=2,<3",
+    "flit_core >=2,<4",
     "pytest"
 ]
 build-backend = "flit_core.buildapi"
