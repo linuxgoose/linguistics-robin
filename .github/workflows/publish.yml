@@ -17,12 +17,6 @@ jobs:
           fetch-depth: 0
           ref: 'main'
 
-      # Set up Python (optional in python image, but keeps setup-python steps compatible)
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-
       # Install Flit
       - name: Install Flit
         run: pip install --upgrade pip flit
