@@ -9,7 +9,7 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     container:
-      image: python:3.12-slim   # <-- ensures Python and pip are available
+      image: cimg/python:3.12
     steps:
       # Checkout the repository
       - uses: actions/checkout@v4
